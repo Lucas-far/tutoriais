@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load bootstrap4 %}
+{% load static %}
+<html lang="en">
+<head>
+    {% bootstrap_css %}
+    <link href="{% static 'css/.css' %}" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Página inicial</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col pt">
+
+            </div>
+        </div>
+    </div>
+{% bootstrap_javascript jquery='full' %}
+</body>
+</html>

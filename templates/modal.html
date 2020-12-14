@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button class="btn btn-primary" data-target="#staticBackdrop" data-toggle="modal" type="button">
+        Ver minha descrição
+    </button>
+
+    <!-- Modal: início -->
+    <div
+        aria-hidden="true" aria-labelledby="staticBackdropLabel" class="modal fade"
+        data-backdrop="static" data-keyboard="false" id="staticBackdrop" tabindex="-1">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Descrição</h5>
+                </div>
+                <div class="modal-body">
+                    <span>Nome: Lucas<br></span>
+                    <span>Profissão: Estudante de programação back-end em Python e Django</span>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal" type="button">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Modal: fim -->
+</body>
+</html>

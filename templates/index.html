@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+{% load bootstrap4 %}
+<html lang="en">
+<head>
+    {% bootstrap_css %}
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"> <!-- font-family: Itim -->
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="row text-center">
+            <div class="col-12 mt20px mb20px">
+                <h1>Bem-vindo</h1>
+                <hr>
+            </div>
+        </div>
+
+<!--        <div class="row text-center">-->
+<!--            <div class="col-12 featured mt20px mb20px">-->
+<!--                <span>B</span>-->
+<!--                <span>E</span>-->
+<!--                <span>M</span>-->
+<!--                <span>-</span>-->
+<!--                <span>V</span>-->
+<!--                <span>I</span>-->
+<!--                <span>N</span>-->
+<!--                <span>D</span>-->
+<!--                <span>O</span>-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <div class="row text-center">
+            <div class="col ma mt20px">
+                <h2 class="blink-text">Para onde ir?</h2>
+            </div>
+        </div>
+
+        <div class="row text-center mt20px mb20px">
+            <div class="col">
+                <pre><code><a class="my-a" href="{% url 'home' %}" target="_blank">Ir à página inicial</a></code></pre>
+            </div>
+        </div>
+
+        <div class="row text-center mb20px">
+            <div class="col">
+                <pre><code><a class="my-a" href="{% url 'criar-conta' %}" target="_blank">Registrar-se</a></code></pre>
+            </div>
+        </div>
+
+        <div class="row text-center mb20px">
+            <div class="col">
+                <pre><code><a class="my-a" href="{% url 'logar' %}" target="_blank">Logar</a></code></pre>
+            </div>
+        </div>
+
+    </div>
+{% bootstrap_javascript jquery='full' %}
+</body>
+</html>
