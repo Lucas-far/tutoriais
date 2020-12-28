@@ -12,9 +12,7 @@ def admin():
 "Aula   # 91. Criando o consumer"
 "Tempo  # A partir de [ 00:40 ]"
 def consumers():
-    """
-    from channels.generic.websocket import AsyncWebsocketConsumer
-    """
+    """ from channels.generic.websocket import AsyncWebsocketConsumer """
 
 def forms():
     """
