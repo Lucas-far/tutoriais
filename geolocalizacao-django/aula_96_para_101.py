@@ -24,54 +24,60 @@ def browser():
     Pesquisa  # geolite2 city tar.gz
     Website   # https://github.com/DocSpring/geolite2-city-mirror
 
-    1. Necessita criar uma conta para ter acesso aos downloads
+    1 - Criar uma conta para ter acesso aos downloads
+
         User   # erl********@out****.com
         Senha  # esw*************
 
     2. Clicar em [ download databases ] https://www.maxmind.com/en/accounts/443805/geoip/downloads
 
     3. Fazer o download:
-        - GeoLite2 City
-        - GeoLite2 Country
+                        GeoLite2 City
+                        GeoLite2 Country
     """
 
-def ubuntu_downloads():
+# Procedimentos no OS, pós instalação
+def os():
     """
-    1. Selecionar os módulos baixados e fazer [ botão direito ] [ extract here ]
-    2. Entrar no diretório [ GeoLite2-City ] e copiar o módulo [ GeoLite2-City.mmdb ]
-    3. Na raiz do projeto: [ new/directory/geoip ] e colar o módulo [ GeoLite2-City.mmdb ]
-    4. Entrar no diretório [ GeoLite2-Country ] e copiar o módulo [ GeoLite2-Country.mmdb ]
-    5. Na raiz do projeto, entrar no diretório já criado: [ geoip ] e colar o módulo [ GeoLite2-Country.mmdb ]
+    1 - Selecionar os módulos baixados: [ botão direito ] [ extract here ]
+
+    Módulos baixados:
+                     GeoLite2-City_20201110
+                     GeoLite2-Country_20201110
+
+    2 - Entrar nesses dois diretórios e copiar os módulos: [ GeoLite2-City.mmdb ] & [ GeoLite2-Country.mmdb ]
+    3 - Voltar ao projeto
+    4 - raiz / new / directory / geoip
+    5 - Colar os módulos copiados em 2
     """
 
 def browser2():
     """
-    Pesquisa  # yelp
-    Website   #
+    1 - Pesquisar por Yelp
+    2 - Acessar o site
+    3 - Criar uma conta
+    4 - No rodapé da página, procurar pelo link [ Developers ] [ Yelp Fusion ] [ Get started ]
+    5 - Preencher o formulário para criar uma nova aplicação
+    6 - Confirma email
+    7 - Pós confirmação, são exibidos: [ Client ID ] e [ API Key ]
 
-    1. É preciso criar uma conta
-    2. No rodapé da página, há um link [ Developers ], depois [ Yelp Fusion ], depois [ Get started ]
-    3. Preenche-se o formulário para criar uma nova aplicação (mandatório confirmar e-mail)
-    4. Ao finalizar o formulário, são exibidos: [ Client ID ] e [ API Key ]
-         Client ID
-             Vt655OilW8i12wu9pAQdqg
-         API Key
-         SujGnU5va3rahW0yqU5yTc1HraG7-qlRTK3lroBPuTbK6a0KZuyLB7456TExcENAZ4gLBoT2qEzTCv3UKZa6J2jUZvywxzRvHVC9DtxfwYBAP_
-         5ECd-8ffE2S2OzX3Yx
+         Client ID:
+                   Vt655OilW8i12wu9pAQdqg
+         API Key:
+                 SujGnU5va3rahW0yqU5yTc1HraG7-qlRTK3lroBPuTbK6a0KZu
+                 yLB7456TExcENAZ4gLBoT2qEzTCv3UKZa6J2jUZvywxzRvHVC9
+                 DtxfwYBAP_5ECd-8ffE2S2OzX3Yx
     """
 
 def settings():
     """
-    from os import path
-
-    ALLOWED_HOSTS = ['*']
     INSTALLED_APPS = ['pa']
     TEMPLATES = [{'DIRS': ['templates']}]
-    STATIC_ROOT = path.join(BASE_DIR, 'staticfiles')
-    MEDIA_ROOT = path.join(BASE_DIR, 'media')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     MEDIA_URL = '/media/'
-    YELP_API_KEY = 'SujGnU5va3rahW0yqU5yTc1HraG7-qlRTK3lroBPuTbK6a0KZuyLB7456TExcENAZ4gLBoT2qEzTCv3UKZa6J2jUZvywxzRvHVC9DtxfwYBAP_5ECd-8ffE2S2OzX3Yx'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
     GEOIP_PATH = path.join(BASE_DIR, 'geoip')
+    YELP_API_KEY = 'SujGnU5va3rahW0yqU5yTc1HraG7-qlRTK3lroBPuTbK6a0KZuyLB7456TExcENAZ4gLBoT2qEzTCv3UKZa6J2jUZvywxzRvHVC9DtxfwYBAP_5ECd-8ffE2S2OzX3Yx'
     """
 
 # todo -> PARTE 2
@@ -86,19 +92,14 @@ def fonte2():
 def pp_urls():
     """
     from django.urls import include
-
     urlpatterns = [path('', include('pa.urls'))]
     """
 
-# Não existe, cria-se
 def pa_urls():
     """
     from django.urls import path
     from .views import IndexView
-
-    urlpatterns = [
-        path('', IndexView.as_view(), name='index')
-    ]
+    urlpatterns = [path('', IndexView.as_view(), name='index')]
     """
 
 # todo -> PARTE 3

@@ -2,31 +2,31 @@
 
 def fonte():
     """
-    Curso:  # Programação Web com Python e Django framework: Essencial
-    Local:  # Seção 9:Relacionamentos entre modelos
-    Aula:   # 81. Relacionamento Um para Muitos
-    """
-
-def obs():
-    """ Esse script é uma continuação do módulo [ relacionamento-1-para-1.py ] """
-
-def relacionamento_um_para_muitos():
-    """
-    1. Uma montadora pode produzir muitos veículos
-    2. Muitos veículos só podem ser produzidos por uma montadora
+    Curso # Programação Web com Python e Django framework: Essencial
+    Local # Seção 9:Relacionamentos entre modelos
+    Aula  # 81. Relacionamento Um para Muitos
     """
 
 def models():
-    """"""
-    # Criação de um novo modelo
     """
     class Manufacturer(models.Model):
         name = models.CharField('Nome', help_text='máx 50 chars', max_length=50)
-    
+
         class Meta:
             verbose_name = 'Fabricante'
             verbose_name_plural = 'Fabricantes'
-    
+
+        def __str__(self):
+            return self.name
+
+    class Vehicle(models.Model):
+        name = models.CharField('Modelo', help_text='máx. 50 chars', max_length=50)
+        price = models.DecimalField('Preço', decimal_places=2, help_text='máx. 7 dígitos e 2 casas decimais', max_digits=9)
+
+        class Meta:
+            verbose_name = 'Veículo'
+            verbose_name_plural = 'Veículos'
+
         def __str__(self):
             return self.name
     """

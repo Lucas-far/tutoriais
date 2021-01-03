@@ -8,8 +8,6 @@ def fonte():
     """
 
 def admin():
-    """"""
-    # Esqueleto
     """
     def get_query_set(self, request):
         qs = super(PostAdmin, self).get_queryset(request)
